@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FigureData } from 'src/app/class/figure-data';
+
 
 @Component({
   selector: 'app-root',

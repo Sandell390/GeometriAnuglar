@@ -1,10 +1,17 @@
-import { Figure } from "../interfaces/figure";
+export abstract class FigureData {
 
-export class FigureData {
+    Name: string = "Default";
 
-    figure: Figure;
+    Sides: Array<number> = [1];
 
-    constructor(_figure: Figure){
-        this.figure = _figure;
+    SidesName: Array<string> = ["a"];
+
+
+    constructor() {
     }
+
+    abstract Circumference(args: any): number;
+
+    abstract Area(args: any): number;
+
 }

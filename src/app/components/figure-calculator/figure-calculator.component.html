@@ -1,4 +1,9 @@
-<input #aValue type="text" (change)="GetA(aValue.value)">
-<input #bValue type="text" (change)="GetB(bValue.value)">
+<div *ngFor="let figure of Figures; let i = index">
+    <h1>{{figure.Name}}</h1>
+    <div *ngFor="let side of figure.Sides; let j = index">
+        <p>{{figure.SidesName[j]}} : <input type="number" [(ngModel)]="figure.Sides[j]"></p>
+    </div>
+    <p>Circumference: {{figure.Circumference(figure.Sides)}}</p>
+    <p>Area: {{figure.Area(figure.Sides)}}</p>
 
-<p>Side A: {{figure.a}} | Side B: {{figure.b}}</p>
+</div>
